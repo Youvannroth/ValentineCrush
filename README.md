@@ -1,2 +1,0 @@
-# ValentineCrush
-For Valentine theme
