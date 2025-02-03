@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Valentine 💌</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Great Vibes', cursive;
+      overflow: hidden;
+    }
+
+    .message-box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 500px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .message-box h1 {
+      font-size: 3rem;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    .message-box p {
+      font-size: 1.5rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .hearts span {
+      position: absolute;
+      color: #e91e63;
+      font-size: 1.5rem;
+      animation: fall 2s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(110vh);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons button.yes {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .buttons button.no {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .buttons button:hover {
+      opacity: 0.8;
+    }
+
+    .response {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #e91e63;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+  </div>
+
+  <div class="message-box">
+    <h1>My Dearest Valentine 💗</h1>
+    <p>
+      Every moment with you feels like a dream. Your smile lights up my world. Happy Valentine's Day! 🌹
+    </p>
+    <img src="Pink-ValentineDay.png" alt="Our Photo" style="width: 100%; border-radius: 10px; margin-top: 20px;">
+    <p>Be my guess on 14 February, please!<br>From Your hidden crush</p>
+
+    <div class="buttons">
+      <button class="yes" onclick="showResponse('yes')">Yes</button>
+      <button class="no" onclick="showResponse('no')">No</button>
+    </div>
+
+    <div class="response" id="response"></div>
+  </div>
+
+  <script>
+    function showResponse(answer) {
+      const responseElement = document.getElementById('response');
+      if (answer === 'yes') {
+        responseElement.textContent = "Yay! I'm so happy! 💖 Can't wait to see you on 14 February!";
+      } else if (answer === 'no') {
+        responseElement.textContent = "Oh no! My heart is broken... 💔 But I still care about you.";
+      }
+    }
+  </script>
+</body>
+</html>
